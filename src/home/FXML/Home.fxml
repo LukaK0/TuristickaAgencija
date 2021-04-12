@@ -1,0 +1,1236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXSnackbar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancMeni" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1050.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.Controller">
+   <children>
+      <VBox fx:id="vbNovi" layoutX="415.0" layoutY="10.0" style="-fx-background-color: #001936; -fx-border-color: #2a73ff;">
+         <children>
+            <JFXTextField fx:id="tDrzavaIme" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" promptText="Ime države" unFocusColor="#2a73ff">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tMestoIme" alignment="CENTER" layoutX="21.0" layoutY="21.0" prefHeight="40.0" prefWidth="200.0" promptText="Ime mesta" unFocusColor="#2a73ff">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <HBox fx:id="hbMestoUDrzavi" layoutX="21.0" layoutY="111.0">
+               <children>
+                  <JFXTextField fx:id="tMestoUDrzavi" alignment="CENTER" editable="false" prefHeight="40.0" prefWidth="160.0" promptText="U Državi" unFocusColor="#2a73ff">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="bMestoUDrzavi" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#handleClicks" prefHeight="20.0" prefWidth="30.0" style="-fx-background-color: #2a73ff;" text="+" textAlignment="CENTER" textFill="#12ff00">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.4095238095238095">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.016200000420212746" green="0.07924548536539078" blue="0.8100000023841858" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.16470588743686676" green="0.45098039507865906" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXTextField fx:id="tAdresaUlica" alignment="CENTER" layoutX="21.0" layoutY="21.0" prefHeight="40.0" prefWidth="200.0" promptText="Ulica" unFocusColor="#2a73ff">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tAdresaBroj" alignment="CENTER" layoutX="21.0" layoutY="231.0" prefHeight="40.0" prefWidth="200.0" promptText="Broj" unFocusColor="#2a73ff">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <HBox fx:id="hbAdresaUMestu" layoutX="21.0" layoutY="101.0">
+               <children>
+                  <JFXTextField fx:id="tAdresaUMestu" alignment="CENTER" editable="false" prefHeight="40.0" prefWidth="160.0" promptText="U Mestu" unFocusColor="#2a73ff">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="bAdresaUMestu" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#handleClicks" prefHeight="20.0" prefWidth="30.0" style="-fx-background-color: #2a73ff;" text="+" textAlignment="CENTER" textFill="#12ff00">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.4095238095238095">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.016200000420212746" green="0.07924548536539078" blue="0.8100000023841858" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.16470588743686676" green="0.45098039507865906" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXTextField fx:id="tSmestajPovrsina" alignment="CENTER" layoutX="21.0" layoutY="181.0" prefHeight="40.0" prefWidth="200.0" promptText="Površina" unFocusColor="#2a73ff">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tSmestajBrojKreveta" alignment="CENTER" layoutX="21.0" layoutY="181.0" prefHeight="40.0" prefWidth="200.0" promptText="Broj kreveta" unFocusColor="#2a73ff">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="cbSmestajTipPansiona" prefHeight="40.0" prefWidth="200.0" promptText="Tip pansiona" unFocusColor="#2a73ff" />
+            <JFXComboBox fx:id="cbSmestajBrojZvezdica" layoutX="21.0" layoutY="341.0" prefHeight="40.0" prefWidth="200.0" promptText="Broj zvezdica" unFocusColor="#2a73ff" />
+            <HBox fx:id="hbSmestajNaAdresi" layoutX="21.0" layoutY="221.0">
+               <children>
+                  <JFXTextField fx:id="tSmestajNaAdresi" alignment="CENTER" editable="false" prefHeight="40.0" prefWidth="160.0" promptText="Na adresi" unFocusColor="#2a73ff">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="bSmestajNaAdresi" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#handleClicks" prefHeight="20.0" prefWidth="30.0" style="-fx-background-color: #2a73ff;" text="+" textAlignment="CENTER" textFill="#12ff00">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.4095238095238095">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.016200000420212746" green="0.07924548536539078" blue="0.8100000023841858" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.16470588743686676" green="0.45098039507865906" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXCheckBox fx:id="chkPrevozObrok" prefHeight="40.0" text="Obrok">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXCheckBox>
+            <JFXComboBox fx:id="cbPrevozTip" layoutX="21.0" layoutY="581.0" onAction="#handleCbSelect" prefHeight="40.0" prefWidth="200.0" promptText="Tip prevoza" unFocusColor="#2a73ff" />
+            <HBox fx:id="hbPrevozOd" layoutX="21.0" layoutY="421.0">
+               <children>
+                  <JFXTextField fx:id="tPrevozOd" alignment="CENTER" editable="false" prefHeight="40.0" prefWidth="160.0" promptText="Od" unFocusColor="#2a73ff">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="bPrevozOd" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#handleClicks" prefHeight="20.0" prefWidth="30.0" style="-fx-background-color: #2a73ff;" text="+" textAlignment="CENTER" textFill="#12ff00">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.4095238095238095">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.016200000420212746" green="0.07924548536539078" blue="0.8100000023841858" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.16470588743686676" green="0.45098039507865906" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox fx:id="hbPrevozDo" layoutX="21.0" layoutY="461.0">
+               <children>
+                  <JFXTextField fx:id="tPrevozDo" alignment="CENTER" editable="false" prefHeight="40.0" prefWidth="160.0" promptText="Do" unFocusColor="#2a73ff">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="bPrevozDo" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#handleClicks" prefHeight="20.0" prefWidth="30.0" style="-fx-background-color: #2a73ff;" text="+" textAlignment="CENTER" textFill="#12ff00">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.4095238095238095">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.016200000420212746" green="0.07924548536539078" blue="0.8100000023841858" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.16470588743686676" green="0.45098039507865906" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXComboBox fx:id="cbPrevozKlasa" layoutX="21.0" layoutY="381.0" prefHeight="40.0" prefWidth="200.0" promptText="Tip klase" unFocusColor="#2a73ff" />
+            <JFXCheckBox fx:id="chkAranzmanOsiguranje" layoutX="21.0" layoutY="461.0" prefHeight="40.0" text="Osiguranje">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="chkAranzmanGrupni" layoutX="21.0" layoutY="871.0" prefHeight="40.0" text="Grupni">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXTextField fx:id="tAranzmanDatumOd" alignment="CENTER" layoutX="21.0" layoutY="261.0" prefHeight="40.0" prefWidth="200.0" promptText="Datum polaska" unFocusColor="#2a73ff">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tAranzmanDatumDo" alignment="CENTER" layoutX="21.0" layoutY="301.0" prefHeight="40.0" prefWidth="200.0" promptText="Datum povratka" unFocusColor="#2a73ff">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="cbAranzmanPrTip" layoutX="21.0" layoutY="501.0" onAction="#handleCbSelect" prefHeight="40.0" prefWidth="200.0" promptText="Tip prevoza" unFocusColor="#2a73ff" />
+            <HBox fx:id="hbAranzmanPr" layoutX="21.0" layoutY="541.0">
+               <children>
+                  <JFXTextField fx:id="tAranzmanPr" alignment="CENTER" editable="false" prefHeight="40.0" prefWidth="160.0" promptText="Prevoz" unFocusColor="#2a73ff">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="bAranzmanPr" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#handleClicks" prefHeight="20.0" prefWidth="30.0" style="-fx-background-color: #2a73ff;" text="+" textAlignment="CENTER" textFill="#12ff00">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.4095238095238095">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.016200000420212746" green="0.07924548536539078" blue="0.8100000023841858" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.16470588743686676" green="0.45098039507865906" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXComboBox fx:id="cbAranzmanSmTip" onAction="#handleCbSelect" prefHeight="40.0" prefWidth="200.0" promptText="Tip smestaja" unFocusColor="#2a73ff" />
+            <HBox fx:id="hbAranzmanSm" layoutX="21.0" layoutY="581.0">
+               <children>
+                  <JFXTextField fx:id="tAranzmanSm" alignment="CENTER" editable="false" prefHeight="40.0" prefWidth="160.0" promptText="Smestaj" unFocusColor="#2a73ff">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="bAranzmanSm" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#handleClicks" prefHeight="20.0" prefWidth="30.0" style="-fx-background-color: #2a73ff;" text="+" textAlignment="CENTER" textFill="#12ff00">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.4095238095238095">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.016200000420212746" green="0.07924548536539078" blue="0.8100000023841858" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.16470588743686676" green="0.45098039507865906" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXTextField fx:id="tPaketPovrat" alignment="CENTER" layoutX="21.0" layoutY="781.0" prefHeight="40.0" prefWidth="200.0" promptText="Povrat" unFocusColor="#2a73ff">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <HBox fx:id="hbPaketAranz" layoutX="21.0" layoutY="421.0">
+               <children>
+                  <JFXTextField fx:id="tPaketAranz" alignment="CENTER" editable="false" prefHeight="40.0" prefWidth="160.0" promptText="Aranzman" unFocusColor="#2a73ff">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="bPaketAranz" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#handleClicks" prefHeight="20.0" prefWidth="30.0" style="-fx-background-color: #2a73ff;" text="+" textAlignment="CENTER" textFill="#12ff00">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.4095238095238095">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.016200000420212746" green="0.07924548536539078" blue="0.8100000023841858" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.16470588743686676" green="0.45098039507865906" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox fx:id="hbNoviDugm">
+               <children>
+                  <JFXButton fx:id="bNoviOtkazi" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#handleClicks" prefHeight="20.0" prefWidth="30.0" style="-fx-background-color: #2a73ff;" text="X" textAlignment="CENTER" textFill="RED">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.4095238095238095">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.016200000420212746" green="0.07924548536539078" blue="0.8100000023841858" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.16470588743686676" green="0.45098039507865906" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets top="7.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="bNoviPotvrdi" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#handleClicks" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #2a73ff;" text="Potvrdi" textAlignment="CENTER" textFill="#e7e5e5">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.4095238095238095">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.016200000420212746" green="0.07924548536539078" blue="0.8100000023841858" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.16470588743686676" green="0.45098039507865906" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <VBox fx:id="vbMeni" alignment="TOP_CENTER" prefHeight="500.0" prefWidth="180.0" style="-fx-background-color: #05071F;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="ivSlika" fitHeight="73.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/jimmy-fallon.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="50.0" />
+               </VBox.margin></ImageView>
+            <Label fx:id="lbTip" text="Agent" textFill="#e7e5e5">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="bAgentAranzman" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="Aranzman" textFill="#e7e5e5">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8_Home_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+            <Button fx:id="bAgentPaket" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="Paket">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8_Open_Envelope_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+            <Button fx:id="bAgentPrevoz" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="Prevoz">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8_Slider__32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+            <Button fx:id="bAgentSmestaj" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="258.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="Smestaj">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8_Slider__32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+            <Button fx:id="bAgentDrzave" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="322.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="Drzave">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8_Slider__32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+            <Button fx:id="bAgentMesta" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="476.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="Mesta">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8_Slider__32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+            <Button fx:id="bAgentAdrese" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="Adrese">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8_Slider__32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+            <Button fx:id="bKlijentUplata" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="Uplata">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8_Person_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+            <Button fx:id="bKlijentPaket" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="Novi paket">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8_Xbox_Menu_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+            </Button>
+            <Button fx:id="bKlijentZakupljeni" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="Moje rezervacije">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8_Box_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+            <Button fx:id="bOdjava" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style.css" text="Odjava">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8_Sign_Out_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <Pane fx:id="pnDodaj" layoutX="90.0" layoutY="40.0" onKeyPressed="#handleKeyPress" prefHeight="400.0" prefWidth="850.0" style="-fx-border-color: #2a73ff;" visible="false">
+         <children>
+            <ScrollPane fx:id="spDodaj" layoutY="25.0" prefHeight="375.0" prefWidth="850.0" stylesheets="@../style.css">
+               <content>
+                  <VBox fx:id="vbDodaj" prefHeight="375.0" prefWidth="850.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </content>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </ScrollPane>
+            <HBox fx:id="hbDodaj" alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="850.0" style="-fx-background-color: #02030A;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="137.0" text="Osiguranje" textFill="#e7e5e5" />
+                  <Label prefWidth="137.0" text="Grupni" textFill="#e7e5e5">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Label prefWidth="137.0" text="Datum polaska" textFill="#e7e5e5">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Label layoutX="269.0" layoutY="14.0" prefWidth="137.0" text="Datum povratka" textFill="#e7e5e5" />
+                  <Label prefWidth="137.0" text="Prevoz" textFill="#e7e5e5">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Label prefWidth="137.0" text="Smestaj" textFill="#e7e5e5">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane fx:id="pnHide" opacity="0.5" prefHeight="500.0" prefWidth="1050.0" style="-fx-background-color: #78BADF;" visible="false">
+         <cursor>
+            <Cursor fx:constant="WAIT" />
+         </cursor>
+      </Pane>
+      <StackPane layoutX="180.0" prefHeight="500.0" prefWidth="870.0" style="-fx-background-color: #02030A;">
+         <children>
+            <Pane fx:id="pnAranzmani" prefHeight="500.0" prefWidth="870.0">
+               <children>
+                  <Label layoutX="57.0" layoutY="25.0" text="Aranžmani" textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbAranzman" alignment="CENTER_LEFT" layoutX="14.0" layoutY="85.0" prefHeight="25.0" prefWidth="850.0" style="-fx-background-color: #02030A;">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="137.0" text="Osiguranje" textFill="#e7e5e5" />
+                        <Label prefWidth="137.0" text="Grupni" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefWidth="137.0" text="Datum polaska" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label layoutX="269.0" layoutY="14.0" prefWidth="137.0" text="Datum povratka" textFill="#e7e5e5" />
+                        <Label prefWidth="137.0" text="Prevoz" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefWidth="137.0" text="Smestaj" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </HBox>
+                  <ScrollPane layoutX="10.0" layoutY="117.0" prefHeight="375.0" prefWidth="850.0" stylesheets="@../style.css">
+                     <content>
+                        <VBox fx:id="spAranzmani" prefHeight="375.0" prefWidth="850.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </ScrollPane>
+                  <JFXButton fx:id="bDodajAranzman" layoutX="795.0" layoutY="30.0" onAction="#handleClicks" style="-fx-background-color: #10165F;" text="Dodaj" textAlignment="CENTER" textFill="#e7e5e5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <effect>
+                        <Reflection bottomOpacity="0.04" topOpacity="0.25" />
+                     </effect>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1805555522441864" green="1.0" blue="0.26249998807907104" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="pnAdrese" prefHeight="500.0" prefWidth="870.0">
+               <children>
+                  <Label layoutX="56.0" layoutY="25.0" text="Adrese" textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbAdrese" alignment="CENTER_LEFT" layoutX="14.0" layoutY="85.0" prefHeight="25.0" prefWidth="850.0" style="-fx-background-color: #02030A;">
+                     <children>
+                        <Label prefWidth="205.0" text="Ulica" textFill="#e7e5e5" />
+                        <Label prefWidth="205.0" text="Broj" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefWidth="205.0" text="Mesto" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label layoutX="269.0" layoutY="14.0" prefWidth="205.0" text="Drzava" textFill="#e7e5e5" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </HBox>
+                  <ScrollPane layoutX="10.0" layoutY="119.0" prefHeight="375.0" prefWidth="850.0" stylesheets="@../style.css">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <content>
+                        <VBox fx:id="vbAdrese" prefHeight="375.0" prefWidth="850.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <JFXButton fx:id="bDodajAdresa" layoutX="795.0" layoutY="30.0" onAction="#handleClicks" style="-fx-background-color: #10165F;" text="Dodaj" textAlignment="CENTER" textFill="#e7e5e5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <effect>
+                        <Reflection bottomOpacity="0.04" topOpacity="0.25" />
+                     </effect>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1805555522441864" green="1.0" blue="0.26249998807907104" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlCustomer11" layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="870.0" />
+            <Pane fx:id="pnMesta" prefHeight="500.0" prefWidth="870.0">
+               <children>
+                  <Label layoutX="56.0" layoutY="25.0" text="Mesta" textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbMesta" alignment="CENTER_LEFT" layoutX="14.0" layoutY="85.0" prefHeight="25.0" prefWidth="850.0" style="-fx-background-color: #02030A;">
+                     <children>
+                        <Label prefWidth="410.0" text="Mesto" textFill="#e7e5e5" />
+                        <Label prefWidth="410.0" text="Drzava" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </HBox>
+                  <ScrollPane layoutX="10.0" layoutY="119.0" prefHeight="375.0" prefWidth="850.0" stylesheets="@../style.css">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <content>
+                        <VBox fx:id="vbMesta" prefHeight="375.0" prefWidth="850.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <JFXButton fx:id="bDodajMesto" layoutX="795.0" layoutY="30.0" onAction="#handleClicks" style="-fx-background-color: #10165F;" text="Dodaj" textAlignment="CENTER" textFill="#e7e5e5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <effect>
+                        <Reflection bottomOpacity="0.04" topOpacity="0.25" />
+                     </effect>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1805555522441864" green="1.0" blue="0.26249998807907104" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="pnDrzave" prefHeight="500.0" prefWidth="870.0">
+               <children>
+                  <Label layoutX="56.0" layoutY="25.0" text="Drzave" textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbDrzave" alignment="CENTER_LEFT" layoutX="14.0" layoutY="85.0" prefHeight="25.0" prefWidth="820.0" style="-fx-background-color: #02030A;">
+                     <children>
+                        <Label prefWidth="160.0" text="Drzava" textFill="#e7e5e5" />
+                        <Label prefWidth="660.0" text="Mesta" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </HBox>
+                  <ScrollPane layoutX="10.0" layoutY="119.0" prefHeight="375.0" prefWidth="850.0" stylesheets="@../style.css">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <content>
+                        <VBox fx:id="vbDrzave" prefHeight="375.0" prefWidth="850.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <JFXButton fx:id="bDodajDrzava" layoutX="795.0" layoutY="30.0" onAction="#handleClicks" style="-fx-background-color: #10165F;" text="Dodaj" textAlignment="CENTER" textFill="#e7e5e5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <effect>
+                        <Reflection bottomOpacity="0.04" topOpacity="0.25" />
+                     </effect>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1805555522441864" green="1.0" blue="0.26249998807907104" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlOrders1" layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="870.0" />
+            <Pane fx:id="pnlCustomer1" layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="870.0" />
+            <Pane fx:id="pnSmestaj" layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="870.0">
+               <children>
+                  <Label layoutX="57.0" layoutY="25.0" text="Smeštaj" textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbSmestaj" alignment="CENTER_LEFT" layoutX="14.0" layoutY="85.0" prefHeight="25.0" prefWidth="850.0" style="-fx-background-color: #02030A;">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="137.0" text="Tip" textFill="#e7e5e5" />
+                        <Label prefWidth="137.0" text="Površina" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefWidth="137.0" text="Broj kreveta" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label layoutX="269.0" layoutY="14.0" prefWidth="137.0" text="Pansion" textFill="#e7e5e5" />
+                        <Label prefWidth="137.0" text="Adresa" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefWidth="137.0" text="Broj zvezdica" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </HBox>
+                  <ScrollPane layoutX="10.0" layoutY="117.0" prefHeight="375.0" prefWidth="850.0" stylesheets="@../style.css">
+                     <content>
+                        <VBox fx:id="vbSmestaj" prefHeight="375.0" prefWidth="850.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </ScrollPane>
+                  <JFXButton fx:id="bDodajSmestaj" layoutX="795.0" layoutY="30.0" onAction="#handleClicks" style="-fx-background-color: #10165F;" text="Dodaj" textAlignment="CENTER" textFill="#e7e5e5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <effect>
+                        <Reflection bottomOpacity="0.04" topOpacity="0.25" />
+                     </effect>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1805555522441864" green="1.0" blue="0.26249998807907104" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="pnPrevoz" layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="870.0">
+               <children>
+                  <Label fx:id="hbPrevoz" layoutX="57.0" layoutY="25.0" text="Prevoz" textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbPrevozi" alignment="CENTER_LEFT" layoutX="14.0" layoutY="85.0" prefHeight="25.0" prefWidth="850.0" style="-fx-background-color: #02030A;">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="164.0" text="Tip" textFill="#e7e5e5" />
+                        <Label prefWidth="164.0" text="Obrok" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefWidth="164.0" text="Polazna adresa" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label layoutX="269.0" layoutY="14.0" prefWidth="164.0" text="Odredišna adresa" textFill="#e7e5e5" />
+                        <Label prefWidth="164.0" text="Klasa" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </HBox>
+                  <ScrollPane layoutX="10.0" layoutY="117.0" prefHeight="375.0" prefWidth="850.0" stylesheets="@../style.css">
+                     <content>
+                        <VBox fx:id="vbPrevoz" prefHeight="375.0" prefWidth="850.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </ScrollPane>
+                  <JFXButton fx:id="bDodajPrevoz" layoutX="795.0" layoutY="30.0" onAction="#handleClicks" style="-fx-background-color: #10165F;" text="Dodaj" textAlignment="CENTER" textFill="#e7e5e5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <effect>
+                        <Reflection bottomOpacity="0.04" topOpacity="0.25" />
+                     </effect>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1805555522441864" green="1.0" blue="0.26249998807907104" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="pnPaket" layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="870.0">
+               <children>
+                  <Label layoutX="57.0" layoutY="25.0" text="Paket" textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="85.0" prefHeight="25.0" prefWidth="850.0" style="-fx-background-color: #02030A;">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="164.0" text="Aranzmani" textFill="#e7e5e5" />
+                        <Label prefWidth="164.0" text="Povrat" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefWidth="164.0" text="Cena" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label layoutX="269.0" layoutY="14.0" prefWidth="164.0" text="Kreirao" textFill="#e7e5e5" />
+                        <Label prefWidth="164.0" text="Zakpuljen" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </HBox>
+                  <ScrollPane layoutX="10.0" layoutY="117.0" prefHeight="375.0" prefWidth="850.0" stylesheets="@../style.css">
+                     <content>
+                        <VBox fx:id="vbPaket" prefHeight="375.0" prefWidth="850.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </ScrollPane>
+                  <JFXButton fx:id="bDodajPaket" layoutX="795.0" layoutY="30.0" onAction="#handleClicks" style="-fx-background-color: #10165F;" text="Dodaj" textAlignment="CENTER" textFill="#e7e5e5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <effect>
+                        <Reflection bottomOpacity="0.04" topOpacity="0.25" />
+                     </effect>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1805555522441864" green="1.0" blue="0.26249998807907104" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="pnUplata" layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="870.0" style="-fx-background-color: #03030A;">
+               <children>
+                  <Label layoutX="55.0" layoutY="25.0" text="Uplata" textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="342.0" layoutY="229.0" text="Za uplatu" textFill="#e7e5e5">
+                     <font>
+                        <Font name="System Bold" size="42.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="tfZaUplatu" alignment="BOTTOM_CENTER" focusColor="#2a73ff" layoutX="224.0" layoutY="291.0" prefHeight="94.0" prefWidth="422.0" promptText="0" unFocusColor="#2a73ff">
+                     <font>
+                        <Font size="43.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label layoutX="280.0" layoutY="60.0" text="Trenutno stanje" textFill="#e7e5e5">
+                     <font>
+                        <Font name="System Bold" size="42.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="tfTrenutnoStanje" alignment="BOTTOM_CENTER" editable="false" focusColor="#2a73ff" layoutX="144.0" layoutY="122.0" prefHeight="94.0" prefWidth="583.0" text="0" unFocusColor="#2a73ff">
+                     <font>
+                        <Font size="43.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="bUplata" alignment="CENTER" defaultButton="true" layoutX="333.0" layoutY="406.0" onAction="#handleClicks" prefHeight="67.0" prefWidth="205.0" ripplerFill="#649dff" style="-fx-background-color: #2a73ff;" text="Uplati" textAlignment="CENTER">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="pnRezervacije" prefHeight="500.0" prefWidth="870.0" style="-fx-background-color: #03030A;">
+               <children>
+                  <Label layoutX="57.0" layoutY="25.0" text="Zakupljeni paketi" textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="85.0" prefHeight="25.0" prefWidth="850.0" style="-fx-background-color: #02030A;">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="164.0" text="Aranzmani" textFill="#e7e5e5" />
+                        <Label prefWidth="164.0" text="Povrat" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefWidth="164.0" text="Cena" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label layoutX="269.0" layoutY="14.0" prefWidth="164.0" text="Kreirao" textFill="#e7e5e5" />
+                        <Label prefWidth="164.0" text="Zakpuljen" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </HBox>
+                  <ScrollPane layoutX="10.0" layoutY="117.0" prefHeight="375.0" prefWidth="850.0" stylesheets="@../style.css">
+                     <content>
+                        <VBox fx:id="vbRezervacije" prefHeight="375.0" prefWidth="850.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </ScrollPane>
+               </children>
+            </Pane>
+            <Pane fx:id="pnStart" prefHeight="500.0" prefWidth="870.0" style="-fx-background-color: #03030A;" />
+         </children>
+      </StackPane>
+      <JFXSnackbar fx:id="obavestenjeM" layoutX="10.0" layoutY="10.0" prefWidth="300.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <Glow level="0.53" />
+         </effect>
+         <children>
+            <Pane fx:id="sbPaneM" layoutX="150.0" prefHeight="75.0" prefWidth="300.0" style="-fx-background-color: #003767;">
+               <children>
+                  <Label fx:id="sbLabelM" alignment="CENTER" prefHeight="75.0" prefWidth="300.0" text="TEST" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </JFXSnackbar>
+   </children>
+   <effect>
+      <DropShadow color="#1b1eeb" />
+   </effect>
+</AnchorPane>

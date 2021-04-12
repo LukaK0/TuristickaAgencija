@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+
+
+<AnchorPane fx:id="ancDodaj" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="850.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <effect>
+      <DropShadow height="47.69" radius="20.38" spread="0.17" width="35.83">
+         <color>
+            <Color red="0.10588235408067703" green="0.11764705926179886" blue="0.9215686321258545" />
+         </color>
+      </DropShadow>
+   </effect>
+   <children>
+      <HBox fx:id="hbDodaj" alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="850.0" style="-fx-background-color: #02030A;">
+         <children>
+            <Label prefHeight="17.0" prefWidth="137.0" text="Osiguranje" textFill="#e7e5e5" />
+            <Label prefWidth="137.0" text="Grupni" textFill="#e7e5e5">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label prefWidth="137.0" text="Datum polaska" textFill="#e7e5e5">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="269.0" layoutY="14.0" prefWidth="137.0" text="Datum povratka" textFill="#e7e5e5" />
+            <Label prefWidth="137.0" text="Prevoz" textFill="#e7e5e5">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label prefWidth="137.0" text="Smestaj" textFill="#e7e5e5">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </HBox>
+      <ScrollPane fx:id="spDodaj" layoutY="25.0" prefHeight="375.0" prefWidth="850.0" stylesheets="@../style.css">
+         <content>
+            <VBox fx:id="vbDodaj" prefHeight="375.0" prefWidth="850.0" spacing="5.0" style="-fx-background-color: #02030A;">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </content>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </ScrollPane>
+   </children>
+</AnchorPane>

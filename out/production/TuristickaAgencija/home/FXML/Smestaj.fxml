@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="hbSmestaj" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="820.0" style="-fx-background-color: #02030A; -fx-background-radius: 5; -fx-background-insets: 0;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.ItemController">
+    <children>
+        <Label fx:id="lbTipSmestaja" prefWidth="137.0" text="Tip" textFill="#b7c3d7" />
+        <Label fx:id="lbPovrsina" prefWidth="137.0" text="Površina" textFill="#b7c3d7">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Label>
+        <Label fx:id="lbBrojKreveta" prefWidth="137.0" text="Broj kreveta" textFill="#b7c3d7">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Label>
+        <Label fx:id="lbPansion" prefWidth="137.0" text="Pansion" textFill="#b7c3d7">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Label>
+      <Label fx:id="lbAdresaSmestaja" layoutX="299.0" layoutY="29.0" prefWidth="137.0" text="Adresa" textFill="#b7c3d7" />
+      <Label fx:id="lbBrojZvezdica" layoutX="474.0" layoutY="29.0" prefWidth="137.0" text="Broj zvezdica" textFill="#b7c3d7" />
+    </children>
+    <effect>
+        <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+    </effect>
+   <padding>
+      <Insets left="5.0" right="5.0" />
+   </padding>
+</HBox>

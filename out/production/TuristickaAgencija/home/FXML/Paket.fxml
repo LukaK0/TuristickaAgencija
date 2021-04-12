@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="hbPaket" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="820.0" style="-fx-background-color: #02030A; -fx-background-radius: 5; -fx-background-insets: 0;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.ItemController">
+    <children>
+        <Label fx:id="lbAranzmaniUPaketu" prefWidth="164.0" text="Aranzmani" textFill="#b7c3d7" />
+        <Label fx:id="lbPovrat" prefWidth="164.0" text="Povrat" textFill="#b7c3d7">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Label>
+        <Label fx:id="lbCena" prefWidth="164.0" text="Cena" textFill="#b7c3d7">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Label>
+        <Label fx:id="lbKreirao" prefWidth="164.0" text="Kreirao" textFill="#b7c3d7">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Label>
+      <Label fx:id="lbZakupljen" layoutX="299.0" layoutY="29.0" prefWidth="164.0" text="Zakupljen" textFill="#b7c3d7" />
+    </children>
+    <effect>
+        <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+    </effect>
+   <padding>
+      <Insets left="5.0" right="5.0" />
+   </padding>
+</HBox>
